@@ -11,6 +11,15 @@ String Property DataKeyActorOverride = 'DSXAC.ActorOverride'
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+Bool Function ActorIsBusy(Actor Who)
+{check all the known ways an actor could be busy doing something and if they
+are tell us so we don't try to dick with em.}
+
+	;; todo
+
+	Return TRUE
+EndFunction
+
 Function ActorSet(Actor Who, Package Task, Int Lvl)
 {force a specific package on an actor.}
 
@@ -50,6 +59,13 @@ Function ActorSet(Actor Who, Package Task, Int Lvl)
 
 	;;Utility.Wait(0.1)
 	Who.EvaluatePackage()
+
+	Return
+EndFunction
+
+Function ActorBind(Actor Who, Package Task, Int Lvl)
+
+	;; todo
 
 	Return
 EndFunction
